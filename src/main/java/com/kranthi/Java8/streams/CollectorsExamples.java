@@ -16,11 +16,11 @@ public class CollectorsExamples {
         List<Person> personList = new ArrayList<>();
 
         try(
-            BufferedReader reader =
+                BufferedReader reader =
                     new BufferedReader(
-                            new InputStreamReader(CollectorsExamples.class.getClassLoader().getResourceAsStream("people.txt")));
+                            new InputStreamReader(Objects.requireNonNull(CollectorsExamples.class.getClassLoader().getResourceAsStream("people.txt"))));
 
-            Stream<String> stream = reader.lines();
+                Stream<String> stream = reader.lines();
             ){
             stream.map(line->{
                 String[] s = line.split(" ");

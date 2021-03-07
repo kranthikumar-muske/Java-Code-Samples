@@ -65,7 +65,7 @@ public class FirstLambda {
 
         Comparator<String> comparator = (s1,s2)->Integer.compare(s2.length(),s1.length());
 
-        List<String> list = Arrays.asList("**","*","****","***");
+                                     List<String> list = Arrays.asList("**","*","****","***");
         Collections.sort(list,comparator);
         for(String s:list) {
             System.out.println(s);
